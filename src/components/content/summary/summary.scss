@@ -1,0 +1,220 @@
+$yellow: #d1d35b;
+$ligth-green: #a5c760;
+$green: #86ad86;
+
+$orange: #fc834b;
+$light-orage: #e09891;
+
+$blue: #2f90df;
+$light-blue: #69b2ee;
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .ammoText {
+        padding: 20px 0 0 0;
+        font-family: "VelaSans-Bold";
+        text-align: center;
+    }
+
+    .ammo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
+        .round {
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            background-color: $green;
+            transition: font-display 0.2s;
+        }
+        
+        .round_ofgun {
+            min-width: 30px;
+            font-family: "VelaSans-Regular";
+            
+        }
+        
+        .round_current {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 40px;
+            width: 40px;
+        }
+
+        .round_current__mosin {
+            background-image: url("/src/assets/pictures/Ammo_762x54.webp");
+        }
+        
+        .round_current__win {
+            background-image: url("/src/assets/pictures/Ammo_308Win.webp");
+        }
+        
+        .round_current__m4 {
+            background-image: url("/src/assets/pictures/Ammo_556x45.webp");
+        }
+        
+        .round_current__ak {
+            background-image: url("/src/assets/pictures/Ammo_545x39.webp");
+        }
+        
+        .round_current__sks {
+            background-image: url("/src/assets/pictures/Ammo_762x39.webp");
+        }
+        
+        .round_current__vss {
+            background-image: url("/src/assets/pictures/Ammo_9x39.webp");
+        }
+
+        .round_current__slugs {
+            background-image: url("/src/assets/pictures/Ammo_12gaSlug.webp");
+        }
+
+        .round_current__buckshot {
+            background-image: url("/src/assets/pictures/Ammo_12gaPellets.webp");
+        }
+    }
+
+    .summary_hp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .summary_txt {
+            font-family: "VelaSans-Bold";
+            margin: 0 0 10px 0;
+        }
+
+        .summary_radios {
+            display: flex;
+            justify-content: space-around;
+            overflow: hidden;
+            border: solid black 1px;
+            border-radius: 10px;
+
+            .summary_radio {
+                display: none;
+            }
+            
+            .summary_label {
+                flex-grow: 1;
+                text-align: center;
+                padding: 15px;
+                font-size: 20px;
+                background-color: $green;
+                cursor: pointer;
+                transition: background-color 0.5s;
+            }
+            
+            .summary_label:not(:last-of-type) {
+                border-right: 1px solid black;
+            }
+            
+            .summary_radio:checked + .summary_label {
+                background-color: $ligth-green;
+            }
+            
+            .summary_reset, .final_count {
+                cursor: pointer;
+                font-family: "VelaSans-Bold";
+            }
+        }
+    }
+
+    .summary_door {
+        background-image: url("/src/assets/pictures/door.png");
+        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 120px;
+        width: 190px;
+    }
+    
+    .final {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .final_buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: space-around;
+            
+        }
+
+        .final_count, .final_reset {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 5px;
+            font-family: "VelaSans-Bold";
+            min-height: 40px;
+            max-width: 90px;
+            transition: box-shadow 0.3s;
+        }
+
+        .final_reset {
+            background-color: $orange;
+        }
+        
+        .final_reset:hover {
+            background-color: $light-orage;
+        }
+
+        .final_count {
+            background-color: $blue;
+        }
+
+        .final_doors {
+            width: 60px;
+            height: 60px;
+            font-family: "VelaSans-Bold";
+            font-size: 40px;
+            border: 2px solid black;
+            border-radius: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $ligth-green;
+        }
+
+        .final_count:hover {
+            background-color: $light-blue;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

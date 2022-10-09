@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script defer src="main.js"></script></head>
+<body>
+    
+    <div class="wrapper">
+        <div class="modal">
+            <div class="modal_wrapper">  F. A. Q.
+                <div class="modal_block">
+                    <div class="modal_title">
+                        Как расчитывется урон?
+                    </div> 
+                    <div class="modal_summaryTxt">
+                        Все введеные вами патроны в умножаются на наносимый урон каждого калибра. Сумма складывается и делится на общее здоровье стены. Полную таблицу урона от каждого оружия и эффективность соответствующей пушки при рейде вы можете узнать по <a href="https://wobo.tools/dayz-single-weapon-stat-tool.php?weapon_stat=Health_Damage#top" class="links">этой ссылке</a>.
+                    </div>
+                </div>
+                <div class="modal_block"> 
+                    <div class="modal_title">
+                        Использование какого оружия предполагается в данном калькуляторе?
+                    </div>
+                    <div class="modal_summaryTxt">
+                        Согласно вышеупомянутой ссылке наиболее оптимальными вариантами будут мосинка для 7.62х54, тундра или саванна для 308win; m16 для 5.56; ak74 для 5.45; SKS для 7.62x39; vss/sval для 9х39; vaiga для дроби. Их использование и подразумевается.
+                    </div>
+                </div>
+                <div class="modal_block">
+                    <div class="modal_title">
+                        Итоговое число - настолько оно точное?
+                    </div> 
+                    <div class="modal_summaryTxt">
+                        Урон расчитывется с учетом того, что вы не прошиваете раму через саму дверь, используя рекомендуемые для рейда пушки. Поэтому итоговое число означает МИНИМАЛЬНОЕ количество дверей.
+                    </div>
+                </div>
+                <div class="modal_block">
+                    <input type="button" class="modal_close" value="Закрыть">
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header_content">
+                <h1 class="header_title"> Dayz Raid Calculator</h1>
+                <div class="header_text">Привет! Это сайт, где вы можете сопоставить количесво ваших патронов и дверей, которые вы можете зарейдить. Все данные по урону взяты с сайта <a href="https://wobo.tools">wobo.tools</a>. Урон по стенам может варьироваться в зависимоти от оружия, которым вы рейдите. Настоятельно рекомендую прочитать FAQ перед использованием.</div>
+                <input type="button" class="header_btn" value="Открыть FAQ">  
+            </div>
+        </div>
+        <div class="main">
+            <div class="calculator">
+                <div class="calculator_container">
+                    <div class="calculator_ammo calculator_ammo__mosin"></div>
+                    <form action="" class="calculator_form">
+                        <input type="text" class="mosinValue inputField">
+                        <div class="calculator_buttons">
+                            <input type="button" value="Добавить" class="mosin_button btn">
+                            <input type="button" value="Сброс" id="reset" class="reset reset_mosin">
+                        </div>
+                    </form>
+                </div>
+                <div class="calculator_container">
+                    <div class="calculator_ammo calculator_ammo__win"></div>
+                    <form action="" class="calculator_form">
+                        <input type="text" class="winValue inputField">
+                        <div class="calculator_buttons">
+                            <input type="button" value="Добавить" class="win_button btn">
+                            <input type="button" value="Сброс" id="reset" class="reset reset_win">
+                        </div>
+                    </form>
+                </div>
+                <div class="calculator_container">
+                    <div class="calculator_ammo calculator_ammo__m4"></div>
+                    <form action="" class="calculator_form">
+                        <input type="text" class="m4Value inputField">
+                        <div class="calculator_buttons">
+                            <input type="button" value="Добавить" class="m4_button btn">
+                            <input type="button" value="Сброс" id="reset" class="reset reset_m4">
+                        </div>
+                    </form>
+                </div>
+                <div class="calculator_container">
+                    <div class="calculator_ammo calculator_ammo__ak47"></div>
+                    <form action="" class="calculator_form">
+                        <input type="text" class="akValue inputField">
+                        <div class="calculator_buttons">
+                            <input type="button" value="Добавить" class="ak_button btn">
+                            <input type="button" value="Сброс" id="reset" class="reset reset_ak">
+                        </form>
+                        </div>
+                </div>
+                <div class="calculator_container">
+                    <div class="calculator_ammo calculator_ammo__sks"></div>
+                    <form action="" class="calculator_form">
+                        <input type="text" class="sksValue inputField">
+                        <div class="calculator_buttons">
+                            <input type="button" value="Добавить" class="sks_button btn">
+                            <input type="button" value="Сброс" id="reset" class="reset reset_sks">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="calculator_container">
+                    <div class="calculator_ammo calculator_ammo__vss"></div>
+                    <form action="" class="calculator_form">
+                        <input type="text" class="vssValue inputField">
+                        <div class="calculator_buttons">
+                            <input type="button" value="Добавить" class="vss_button btn">
+                            <input type="button" value="Сброс" id="reset" class="reset reset_vss">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="calculator_container">
+                    <div class="calculator_ammo calculator_ammo__slugs"></div>
+                    <form action="" class="calculator_form">
+                        <input type="text" class="slugsValue inputField">
+                        <div class="calculator_buttons">
+                            <input type="button" value="Добавить" class="slugs_button btn">
+                            <input type="button" value="Сброс" id="reset" class="reset reset_slugs">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="calculator_container">
+                    <div class="calculator_ammo calculator_ammo__buckshot"></div>
+                    <form action="" class="calculator_form">
+                        <input type="text" class="buckshotValue inputField">
+                        <div class="calculator_buttons">
+                            <input type="button" value="Добавить" class="buckshot_button btn">
+                            <input type="button" value="Сброс" id="reset" class="reset reset_buckshot">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="ammoText">
+                    Текущее количесво введенных патронов
+                </div>
+                <div class="ammo"> 
+                    <div class="round">
+                        <div class="round_current round_current__mosin"></div>
+                        <div class="round_ofgun round_ofgun__mosin"></div>
+                    </div> 
+                    <div class="round">
+                        <div class="round_current round_current__win"></div>
+                        <div class="round_ofgun round_ofgun__win"></div>
+                    </div>
+                    <div class="round">
+                        <div class="round_current round_current__m4"></div>
+                        <div class="round_ofgun round_ofgun__m4"></div>
+                    </div>
+                    <div class="round">
+                        <div class="round_current round_current__ak"></div>
+                        <div class="round_ofgun round_ofgun__ak"></div>
+                    </div>
+                    <div class="round">
+                        <div class="round_current round_current__sks"></div>
+                        <div class="round_ofgun round_ofgun__sks"></div>
+                    </div>
+                    <div class="round">
+                        <div class="round_current round_current__vss"></div>
+                        <div class="round_ofgun round_ofgun__vss"></div>
+                    </div>
+                    <div class="round">
+                        <div class="round_current round_current__slugs"></div>
+                        <div class="round_ofgun round_ofgun__slugs"></div>
+                    </div>
+                    <div class="round">
+                        <div class="round_current round_current__buckshot"></div>
+                        <div class="round_ofgun round_ofgun__buckshot"></div>
+                    </div>
+                </div>
+                
+                <div class="summary_hp">
+                    <div class="summary_txt">Множитель хп стен на сервере</div>
+                    <div class="summary_radios">
+                        <input type="radio"  class="summary_radio summary_radio__one" name="multiplier" value="x1" id="x1" checked>
+                        <label class="summary_label" for="x1">x1</label>
+                        
+                        <input type="radio" class="summary_radio summary_radio__onePointFive" name="multiplier" value="x1.5" id="x1.5">
+                        <label class="summary_label" for="x1.5">x1.5</label>
+
+                        <input type="radio" class="summary_radio summary_radio__two" name="multiplier" value="x2" id="x2">
+                        <label class="summary_label" for="x2">x2</label>
+                    </div>
+                </div>
+                <div class="summary_door"></div>
+                <div class="final">
+                    <div class="final_buttons">
+                        <button class="final_reset">Сброс патронов и урона</button>
+                        <button class="final_count">Подстчет</button>
+                    </div>
+                    <div class="final_doors">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contacts">
+            <div class="contacts_txt">
+                С вопросами - сюда!
+            </div>
+            <div class="contacts_icons">
+                <div class="contacts_icon contacts_icon_vk">
+                    <a class="contacts_a" href="https://vk.com/cmonfedyai"></a>
+                </div>
+                <div class="contacts_icon contacts_icon_discord">
+                    <a class="contacts_a" href="https://discord.gg/DxgeC5hnWX"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

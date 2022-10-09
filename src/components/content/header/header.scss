@@ -1,0 +1,47 @@
+$grey: #b2e6b2;
+
+@mixin flexCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0px 100px 0 100px; 
+
+    .header_content {
+        background-color: gray;
+        opacity: 0.85;
+        margin: 20px;
+        padding: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header_title {
+        font-family: "VelaSans-Bold";
+        font-size: 30px;
+    }
+    
+    .header_text {
+        font-family: "VelaSans-Regular";
+        line-height: 25px;
+        text-align: justify;
+    } 
+    
+    .header_btn {
+        max-width: 100px;
+        padding: 7px;
+        @include flexCol;
+        text-align: center;
+        font-family: "VelaSans-Bold";
+        background-color: $grey;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+}

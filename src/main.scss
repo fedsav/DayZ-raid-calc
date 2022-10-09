@@ -1,0 +1,21 @@
+@import "./components/reset.scss";
+@import "./components/sections.scss";
+@import "./components/content/header/header.scss";
+@import "./components/content/modal/modal.scss";
+@import "./components/content/calculator/calculator.scss";
+@import "./components/content/summary/summary.scss";
+@import "./components/content/contacts/contacts.scss";
+
+@font-face {
+    font-family: "VelaSans-Bold";
+    src: url("/src/assets/fonts/VelaSans-Bold.ttf");
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "VelaSans-Regular";
+    src: url("/src/assets/fonts/VelaSans-Regular.ttf");
+    font-style: normal; 
+    font-weight: normal; 
+}

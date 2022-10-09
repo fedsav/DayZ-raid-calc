@@ -1,0 +1,103 @@
+$yellow: #d1d35b;
+$ligth-green: #a5c760;
+$green: #86ad86;
+
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+
+    .calculator_container {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+        .calculator_ammo {
+            height: 100px;
+            width: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .calculator_form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .inputField {
+                border: 1px solid black;
+                font-family: "VelaSans-Regular";
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .calculator_buttons {
+                display: flex;
+                gap: 10px;
+
+                .mosin_button, .win_button, .m4_button, .ak_button, .sks_button, .vss_button, .buckshot_button, .slugs_button, .reset {
+                    border: 1px solid black;
+                    font-family: "VelaSans-Regular";
+                    font-size: 16px;
+                    padding: 5px;
+                    background-color: $green;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: box-shadow 0.3s;
+                }
+
+                .btn:hover, .reset:hover {
+                    background-color:  $ligth-green;
+                }
+            }  
+        }
+        
+        .calculator_ammo__mosin {
+            background-image: url("/src/assets/pictures/Ammo_762x54.webp");
+            
+        }
+        
+        .calculator_ammo__win {
+            background-image: url("/src/assets/pictures/Ammo_308Win.webp");
+            
+        }
+        
+        .calculator_ammo__ak47 {
+            background-image: url("/src/assets/pictures/Ammo_545x39.webp");
+            
+        }
+        
+        .calculator_ammo__m4 {
+            background-image: url("/src/assets/pictures/Ammo_556x45.webp");
+            
+        }
+        
+        .calculator_ammo__sks {
+            background-image: url("/src/assets/pictures/Ammo_762x39.webp");
+            background-size: cover;
+        }
+        
+        .calculator_ammo__vss {
+            background-image: url("/src/assets/pictures/Ammo_9x39.webp");
+            background-size: cover;
+        }
+        
+        .calculator_ammo__slugs {
+            background-image: url("/src/assets/pictures/Ammo_12gaSlug.webp");
+            background-size: contain;
+        }
+
+        .calculator_ammo__buckshot {
+            background-image: url("/src/assets/pictures/Ammo_12gaPellets.webp");
+            background-size:contain;
+        }
+    
+}
+

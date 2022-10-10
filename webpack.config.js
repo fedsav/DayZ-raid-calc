@@ -38,6 +38,24 @@ module.exports = {
               ],
           },
           {
+            test: /\.css$/,
+            exclude: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          }
+        ]
+          },
+          {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
             type: 'asset/resource',
             

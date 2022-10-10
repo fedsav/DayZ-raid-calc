@@ -167,13 +167,17 @@ $light-blue: #69b2ee;
             background-color: $orange;
         }
         
-        .final_reset:hover {
-            background-color: $light-orage;
-        }
+        // .final_reset:hover {
+        //     background-color: $light-orage;
+        // }
 
         .final_count {
             background-color: $blue;
         }
+
+        // .final_count:hover {
+        //     background-color: $light-blue;
+        // }
 
         .final_doors {
             width: 60px;
@@ -187,10 +191,6 @@ $light-blue: #69b2ee;
             align-items: center;
             justify-content: center;
             background-color: $ligth-green;
-        }
-
-        .final_count:hover {
-            background-color: $light-blue;
         }
     }
 }

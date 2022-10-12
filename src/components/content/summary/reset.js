@@ -3,16 +3,15 @@ import {allRounds, damage} from "/src/components/content/calculator/addingAmmo.j
 let resetBtn = document.querySelector(".final_reset");
 
 resetBtn.addEventListener("click", () => {
-    damage.length = 0
+    for (let key in damage) {
+        damage[key] = 0
+    }
+
     console.log(damage)
-    allRounds["762x54"] = 0;
-    allRounds["308"] = 0;
-    allRounds["5x56"] = 0;
-    allRounds["5x45"] = 0;
-    allRounds["762x39"] = 0;
-    allRounds["9x39"] = 0;
-    allRounds["slugs"] = 0;
-    allRounds["buckshot"] = 0;
+
+    for (let key in allRounds) {
+        allRounds[key] = 0
+    }
     console.log(allRounds)
 
     let mosinData = document.querySelector(".round_ofgun__mosin");

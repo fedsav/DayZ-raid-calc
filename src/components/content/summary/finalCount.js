@@ -19,8 +19,8 @@ finalBtn.addEventListener("click", () => {
         console.log(hp)
     }
     
-
-    let allDamage = damage.reduce((sum, current) => sum + current, 0);
+    let damageArr = Object.values(damage)
+    let allDamage = damageArr.reduce((sum, current) => sum + current, 0);
     
     console.log(allDamage);
 

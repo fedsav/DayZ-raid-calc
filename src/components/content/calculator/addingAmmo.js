@@ -6,9 +6,18 @@ export let allRounds = {
     "762x39": 0,
     "9x39": 0,
     "slugs": 0,
-    "bucksot": 0,
+    "buckshot": 0,
 };
-export let damage = [];
+export let damage = {
+    "D762x54": 0,
+    "D308": 0,
+    "D5x56": 0,
+    "D5x45": 0,
+    "D762x39": 0,
+    "D9x39": 0,
+    "Dslugs": 0,
+    "Dbucksot": 0,
+};
 
 // мосинский патрон
 
@@ -17,14 +26,14 @@ let mosinBtn = document.querySelector('.mosin_button');
 
 mosinBtn.addEventListener('click', (event) => {
     let ammo = document.querySelector('.mosinValue').value;
-    damage.push(ammo * 150)
+    damage["D762x54"] = ammo * 150
     allRounds["762x54"] = ammo
 
     let txtZone = document.querySelector(".round_ofgun__mosin");
     txtZone.textContent = ammo
 
-    console.log(allRounds)
-    console.log(damage)
+    console.log("Патроны вот", allRounds)
+    console.log("Урон весь вот", damage)
 })
 
 let mosinReset = document.querySelector(".reset_mosin");
@@ -41,14 +50,14 @@ let winBtn = document.querySelector('.win_button');
 
 winBtn.addEventListener('click', (event) => {
     let ammo = document.querySelector('.winValue').value;
-    damage.push(ammo * 150)
+    damage["D308"] = ammo * 150
     allRounds["308"] = ammo
 
     let txtZone = document.querySelector(".round_ofgun__win");
     txtZone.textContent = ammo
 
-    console.log(allRounds)
-    console.log(damage)
+    console.log("Патроны вот", allRounds)
+    console.log("Урон весь вот", damage)
 })
 
 let winReset = document.querySelector(".reset_win");
@@ -65,14 +74,14 @@ let m4Btn = document.querySelector('.m4_button');
 
 m4Btn.addEventListener('click', (event) => {
     let ammo = document.querySelector('.m4Value').value;
-    damage.push(ammo * 107)
+    damage["D5x56"] = ammo * 107
     allRounds["5x56"] = ammo
 
     let txtZone = document.querySelector(".round_ofgun__m4");
     txtZone.textContent = ammo
 
-    console.log(allRounds)
-    console.log(damage)
+    console.log("Патроны вот", allRounds)
+    console.log("Урон весь вот", damage)
 })
 
 let m4Reset = document.querySelector(".reset_m4");
@@ -89,11 +98,11 @@ let akBtn = document.querySelector('.ak_button');
 
 akBtn.addEventListener('click', (event) => {
     let ammo = document.querySelector('.akValue').value;
-    damage.push(ammo * 80)
+    damage["D5x45"] = ammo * 80
     allRounds["5x45"] = ammo
 
-    console.log(allRounds)
-    console.log(damage)
+    console.log("Патроны вот", allRounds)
+    console.log("Урон весь вот", damage)
 
     let txtZone = document.querySelector(".round_ofgun__ak");
     txtZone.textContent = ammo
@@ -113,11 +122,11 @@ let sksBtn = document.querySelector('.sks_button');
 
 sksBtn.addEventListener('click', (event) => {
     let ammo = document.querySelector('.sksValue').value;
-    damage.push(ammo * 110)
+    damage["D762x39"] = ammo * 110
     allRounds["762x39"] = ammo
 
-    console.log(allRounds)
-    console.log(damage)
+    console.log("Патроны вот", allRounds)
+    console.log("Урон весь вот", damage)
 
     let txtZone = document.querySelector(".round_ofgun__sks");
     txtZone.textContent = ammo
@@ -137,14 +146,14 @@ let vssBtn = document.querySelector('.vss_button');
 
 vssBtn.addEventListener('click', (event) => {
     let ammo = document.querySelector('.vssValue').value;
-    damage.push(ammo * 75)
+    damage["D9x39"] = ammo * 75
     allRounds["9x39"] = ammo
 
     let txtZone = document.querySelector(".round_ofgun__vss");
     txtZone.textContent = ammo
 
-    console.log(allRounds)
-    console.log(damage)
+    console.log("Патроны вот", allRounds)
+    console.log("Урон весь вот", damage)
 })
 
 let vssReset = document.querySelector(".reset_vss");
@@ -161,14 +170,14 @@ let slugsBtn = document.querySelector('.slugs_button');
 
 slugsBtn.addEventListener('click', (event) => {
     let ammo = document.querySelector('.slugsValue').value;
-    damage.push(ammo * 75)
-    allRounds["9x39"] = ammo
+    damage["Dslugs"] = ammo * 99
+    allRounds["slugs"] = ammo
 
     let txtZone = document.querySelector(".round_ofgun__slugs");
     txtZone.textContent = ammo
 
-    console.log(allRounds)
-    console.log(damage)
+    console.log("Патроны вот", allRounds)
+    console.log("Урон весь вот", damage)
 })
 
 let slugsReset = document.querySelector(".reset_slugs");
@@ -185,14 +194,14 @@ let buckshotBtn = document.querySelector('.buckshot_button');
 
 buckshotBtn.addEventListener('click', (event) => {
     let ammo = document.querySelector('.buckshotValue').value;
-    damage.push(ammo * 75)
-    allRounds["9x39"] = ammo
+    damage["Dbuckshot"] = ammo * 125
+    allRounds["buckshot"] = ammo
 
     let txtZone = document.querySelector(".round_ofgun__buckshot");
     txtZone.textContent = ammo
 
-    console.log(allRounds)
-    console.log(damage)
+    console.log("Патроны вот", allRounds)
+    console.log("Урон весь вот", damage)
 })
 
 let buckshotReset = document.querySelector(".reset_buckshot");
@@ -208,7 +217,8 @@ let calculator = document.querySelector(".calculator");
 
 calculator.addEventListener("click", (event) => {
     if (event.target.id === "reset") {
-        event.target.closest(".calculator_form")[0].value = ''
+        let inp = event.target.closest(".calculator_form").childNodes[1];
+        event.target.closest(".calculator_form").childNodes[1].value = ''
     }
 })
 

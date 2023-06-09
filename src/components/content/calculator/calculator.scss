@@ -2,6 +2,11 @@ $yellow: #d1d35b;
 $ligth-green: #a5c760;
 $green: #86ad86;
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+      
 .calculator {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -52,10 +57,6 @@ $green: #86ad86;
                     cursor: pointer;
                     transition: box-shadow 0.3s;
                 }
-
-                // .btn:hover, .reset:hover {
-                //     background-color:  $ligth-green;
-                // }
             }  
         }
         

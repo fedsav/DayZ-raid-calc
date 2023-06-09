@@ -13,16 +13,12 @@ finalBtn.addEventListener("click", () => {
 
     if (oneAndHalfMulti.checked === true) {
         hp *= 1.5;
-        console.log(hp)
     } if (twoMulti.checked === true) {
         hp *= 2
-        console.log(hp)
     }
     
     let damageArr = Object.values(damage)
     let allDamage = damageArr.reduce((sum, current) => sum + current, 0);
-    
-    console.log(allDamage);
 
     doorsNumber.innerHTML = Math.floor(allDamage / hp)
 })

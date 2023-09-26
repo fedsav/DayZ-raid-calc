@@ -1,5 +1,13 @@
-# DayZ-raid-calc
-Actually this is my first frontend pet projct using SCSS and Webpack :) This app helps you to raid enemy bases in DayZ more efficiency
 
-The usage is pretty simple: enter your ammo, choose door HP multiplier and click on final count button. Appeared number is how many door you can successfully raid.
-Actual for 1.19 DayZ vesion. 
+# DayZ raid calculator
+
+That project is actually a converter, which allows you to correcly calculate your ammo and do yyour raiding more efficiently in DayZ (actually this is a videogame). 
+
+Made with vanilla JS and webpack.
+
+Relevant for DayZ 1.19 version
+
+
+## Preview
+
+https://dayzrc.netlify.app

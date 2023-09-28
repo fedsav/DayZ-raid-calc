@@ -10,4 +10,4 @@ Relevant for DayZ 1.19 version
 
 ## Preview
 
-https://dayzrc.netlify.app
+https://fedsav.github.io/DayZ-raid-calc/
